@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[597],{9333:(_,n,e)=>{(window.__NEXT_P=window.__NEXT_P||[]).push(["/tablemanagement",function(){return e(8533)}])}},_=>{var n=n=>_(_.s=n);_.O(0,[916,69,407,148,151,431,533,636,593,792],()=>n(9333)),_N_E=_.O()}]);
