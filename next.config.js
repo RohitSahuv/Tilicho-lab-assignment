@@ -5,11 +5,7 @@ const nextConfig = {
   basePath: "",
   compiler: {
     styledComponents: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  swcMinify: false,
+  }
 };
 
 module.exports = nextConfig;
