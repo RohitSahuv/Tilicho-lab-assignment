@@ -120,7 +120,7 @@ const LeadManagement: React.FC = () => {
 
   return (
     <>
-      <div className="w-[95%] min-h-[50px] flex justify-between items-center  overflow-x-auto">
+      <div className="w-[95%] min-h-[50px] flex justify-between items-center  overflow-x-auto relative">
         <div className="text-sm font-medium text-center text-gray-500 dark:text-gray-400 dark:border-gray-700">
           <ul className="flex -mb-px">
             {tabs.map((tab) => (
@@ -162,7 +162,7 @@ const LeadManagement: React.FC = () => {
             />
           </div>
 
-          <div className="flex items-center cursor-pointer justify-center border border-gray-300 rounded-lg py-1 px-3 gap-1 relative">
+          <div className="flex items-center cursor-pointer justify-center border border-gray-300 rounded-lg py-1 px-3 gap-1 ">
             <MdFilterList
               fontSize={"1rem"}
               onClick={() => {
@@ -170,20 +170,21 @@ const LeadManagement: React.FC = () => {
               }}
             />
             Filters
-            {isFilter && (
-              <div className="absolute z-10 right-0 bottom-0">
-                <FilterPopUp
-                  onApply={handleApplyFilter}
-                  onClear={handleClearFilter}
-                  filterFormData={filterFormData}
-                  setFilterFormData={setFilterFormData}
-                  onClose={() => setIsFilter(false)}
-                />
-              </div>
-            )}
+
           </div>
         </div>
       </div>
+      {isFilter && (
+        <div className="absolute z-10 right-0 top-[50px]">
+          <FilterPopUp
+            onApply={handleApplyFilter}
+            onClear={handleClearFilter}
+            filterFormData={filterFormData}
+            setFilterFormData={setFilterFormData}
+            onClose={() => setIsFilter(false)}
+          />
+        </div>
+      )}
       <TableContainer width="95%" marginTop="2rem">
         {loading ? (
           <SpinnerLoading />
